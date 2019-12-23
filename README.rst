@@ -29,13 +29,34 @@ Demo
 
    Usage: pcli [OPTIONS] COMMAND [ARGS]...
 
+     Pluggable Command-line example application.
+
    Options:
      --help  Show this message and exit.
 
    Commands:
-     version
-     workflow
+     version   Print CLI version.
+     workflow  Command group coming from the pluggable-cli-plugin.
 
+
+.. code-block::
+
+   $ (.venv) pcli workflow --help
+
+.. code-block::
+
+   Usage: pcli workflow [OPTIONS] COMMAND [ARGS]...
+
+     Command group coming from the pluggable-cli-plugin.
+
+   Options:
+     --help  Show this message and exit.
+
+   Commands:
+     branch   Branch example command.
+     clone    Clone example command.
+     fetch    Clone example command.
+     version  Version example command.
 
 
 Project structure
@@ -43,7 +64,7 @@ Project structure
 
 This example project is composed by two sub-projects:
 
-* ``pluggable-cli:`` The *"host"* package.
+* ``pluggable-cli:`` The host package.
 * ``pluggable-cli-plugin:`` A simple example plugin package.
 
 Development tasks

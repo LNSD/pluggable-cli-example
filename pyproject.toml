@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pluggable-cli-example"
 version = "1.0.0"
-description = ""
+description = "Pluggable CLI example program"
 authors = ["Lorenzo Delgado <lorenzo.delgado@lnsd.es>"]
 
 [tool.poetry.dependencies]
