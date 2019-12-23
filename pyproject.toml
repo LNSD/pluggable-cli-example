@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = ""
+authors = ["Lorenzo Delgado <lorenzo.delgado@lnsd.es>"]
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.6"
+pcli = { path = "./pluggable-cli/" }
+pcli-plugin = { path = "./pluggable-cli-plugin/" }
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

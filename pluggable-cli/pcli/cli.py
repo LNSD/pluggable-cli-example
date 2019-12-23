@@ -1,7 +1,8 @@
 """Pluggable Command-line tool."""
 
-import click
+import itertools
 
+import click
 import pcli.plugin
 from pcli.__meta__ import __version__
 
@@ -22,7 +23,8 @@ def main():
 
     # Build command-line
     cli.add_command(version)
-    for cmd in pm.hook.pcli_get_commands():
+    commands = pm.hook.pcli_get_commands()
+    for cmd in itertools.chain(*commands):
         cli.add_command(cmd)
 
     # Run command root
