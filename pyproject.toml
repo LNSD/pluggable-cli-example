@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "example"
+name = "pluggable-cli-example"
 version = "1.0.0"
 description = ""
 authors = ["Lorenzo Delgado <lorenzo.delgado@lnsd.es>"]

@@ -5,8 +5,9 @@ import click
 import pcli.plugin
 
 
-@click.command()
+@click.group()
 def workflow():
+    """Command group coming from the pluggable-cli-plugin."""
     click.echo("Workflow command")
 
 
@@ -16,4 +17,5 @@ def pcli_get_commands():
 
     :return: List of commands
     """
-    return [workflow]
+    return [v for v in globals().values()
+            if isinstance(v, click.core.BaseCommand)]

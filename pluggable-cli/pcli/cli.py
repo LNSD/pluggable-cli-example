@@ -3,18 +3,20 @@
 import itertools
 
 import click
+import pcli
 import pcli.plugin
-from pcli.__meta__ import __version__
 
 
 @click.group()
 def cli():
+    """Pluggable Command-line example application."""
     pass
 
 
 @click.command()
 def version():
-    click.echo(__version__)
+    """Print CLI version."""
+    click.echo("Pluggable CLI v{}".format(pcli.__version__))
 
 
 def main():
